@@ -1,21 +1,11 @@
-name: My GitHub Actions Pipeline
+name: Hello World Pipeline
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+on: [push]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-
-    - name: Install dependencies
-      run: npm install
-
-    - name: Build project
-      run: npm run build
+      - name: Hello world
+        run: echo "Hello, World!"
